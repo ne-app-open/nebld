@@ -14,12 +14,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/vendor)
 
-file(GLOB NEBUILD_CLI_SOURCES "${CMAKE_SOURCE_DIR}/src/CommandLine/*.cpp")
+file(GLOB NEBUILD_CLI_SOURCES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 set(NEBUILD_SOURCES ${NEBUILD_CLI_SOURCES})
 
 add_executable(nebld ${NEBUILD_SOURCES})
 
-target_link_libraries(nebld BldKit)
+target_compile_definitions(nebld PUBLIC NEBUILD_INTERNAL_SDK)
 
 target_include_directories(nebld PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/vendor)
 
