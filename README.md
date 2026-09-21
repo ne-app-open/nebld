@@ -1,8 +1,8 @@
-# NeBld
+# NeBld System
 
-[![License: GPL-3.0](https://img.shields.io/badge/LICENSE-BSD--3.0-blue.svg)](LICENSE)
+[![License: BSD-3.0](https://img.shields.io/badge/LICENSE-BSD--3.0-blue.svg)](LICENSE)
 
-Fast and easy to use build system for low-level projects.
+This build system is designed to be fast and easy-to-use, and also easy to install.
 
 ## Requirements:
 
@@ -11,7 +11,27 @@ Fast and easy to use build system for low-level projects.
 
 ## Guide (GNU Make):
 
-- Run make `build-nebld-core` and `build-nebld` to build from the sources.
+## On Linux...
+
+You do this:
+
+```sh
+make -f linux-gcc.make
+```
+
+## On Windows...
+
+You do this:
+
+```sh
+make -f win64-msvc.make
+```
+
+Or for MSVC:
+
+```sh
+make -f win64-msvc.make
+```
 
 ## Guide (NeBuild):
 
