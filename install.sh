@@ -4,24 +4,19 @@
 
 set -e
 
-INSTALL_PREFIX="${PREFIX:-/usr/local}"
+git clone https://github.com/ne-app-open/nebld nebld
+cd nebld
+
 BUILD_DIR="build"
 SOURCE_DIR="$(cd "$(dirname "$0")/private" && pwd)"
 
 echo "=> Source dir : $SOURCE_DIR"
 echo "=> Build dir  : $BUILD_DIR"
-echo "=> Install to : $INSTALL_PREFIX"
 
 cmake -S "$SOURCE_DIR" -B "$BUILD_DIR" \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX"
+  -DCMAKE_BUILD_TYPE=Release
 
 cmake --build "$BUILD_DIR"
 
 echo ""
-echo "=> Build complete. Installing nebld to $INSTALL_PREFIX/bin ..."
-
-mkdir -p "$INSTALL_PREFIX/bin"
-cp "$BUILD_DIR/nebld" "$INSTALL_PREFIX/bin/"
-
-echo "=> Done. Run 'nebld --help' to verify the installation."
+echo "=> Build complete."
