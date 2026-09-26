@@ -9,6 +9,20 @@ This build system is designed to be fast and easy-to-use, and also easy to insta
 - GNU C++
 - GNU Make
 
+## Fast Install:
+
+You can install directly nebuild from this command alone on POSIX:
+
+```
+curl -fsSL https://raw.githubusercontent.com/ne-app-open/nebld/refs/heads/develop/install.sh | sh
+```
+
+### And on Windows:
+
+```
+curl -fsSL https://raw.githubusercontent.com/ne-app-open/nebld/refs/heads/develop/install.sh && install.sh
+```
+
 ## Guide (GNU Make):
 
 ## On Linux...
