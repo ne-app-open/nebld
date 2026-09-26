@@ -4,7 +4,11 @@
 
 set -e
 
-git clone https://github.com/ne-app-open/nebld nebld
+GIT=git
+OUT=nebld/x64-pc
+FLAGS=clone
+
+${GIT} ${FLAGS} https://github.com/ne-app-open/nebld ${OUT}
 cd nebld
 
 BUILD_DIR="build"
@@ -13,7 +17,7 @@ SOURCE_DIR="$(cd "$(dirname "$0")/private" && pwd)"
 echo "=> Source dir : $SOURCE_DIR"
 echo "=> Build dir  : $BUILD_DIR"
 
-cmake -S "$SOURCE_DIR" -B "$BUILD_DIR" \
+cmake -S "$SOURCE_DIR" -G "MinGW Makefiles" -B "$BUILD_DIR" \
   -DCMAKE_BUILD_TYPE=Release
 
 cmake --build "$BUILD_DIR"
