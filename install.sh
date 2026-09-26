@@ -14,7 +14,7 @@ cd nebld
 cd ${OUT}
 
 BUILD_DIR="build"
-SOURCE_DIR="$(cd "$(dirname "$0")/private" && pwd)"
+SOURCE_DIR="$(cd "private" && pwd)"
 
 echo "=> Source dir : $SOURCE_DIR"
 echo "=> Build dir  : $BUILD_DIR"
