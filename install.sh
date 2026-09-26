@@ -11,6 +11,8 @@ FLAGS=clone
 ${GIT} ${FLAGS} https://github.com/ne-app-open/nebld ${OUT}
 cd nebld
 
+cd ${OUT}
+
 BUILD_DIR="build"
 SOURCE_DIR="$(cd "$(dirname "$0")/private" && pwd)"
 
