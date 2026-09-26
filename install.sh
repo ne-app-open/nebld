@@ -18,7 +18,7 @@ SOURCE_DIR="$(cd "private" && pwd)"
 echo "=> Source dir : $SOURCE_DIR"
 echo "=> Build dir  : $BUILD_DIR"
 
-cmake -S "$SOURCE_DIR" -G "MinGW Makefiles" -B "$BUILD_DIR" \
+cmake -S "$SOURCE_DIR" -G "Unix Makefiles" -B "$BUILD_DIR" \
   -DCMAKE_BUILD_TYPE=Release
 
 cmake --build "$BUILD_DIR"
