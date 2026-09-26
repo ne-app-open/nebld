@@ -9,7 +9,6 @@ OUT=nebld/x64-pc
 FLAGS=clone
 
 ${GIT} ${FLAGS} https://github.com/ne-app-open/nebld ${OUT}
-cd nebld
 
 cd ${OUT}
 
