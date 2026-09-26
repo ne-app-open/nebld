@@ -2,7 +2,7 @@
 
 [![License: BSD-3.0](https://img.shields.io/badge/LICENSE-BSD--3.0-blue.svg)](LICENSE)
 
-This build system is designed to be fast and easy-to-use, and also easy to install.
+This build system is designed to be fast and easy-to-use and easy to install. Targeting general use for C/C++ projects as well.
 
 ## Requirements:
 
