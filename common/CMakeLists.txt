@@ -5,6 +5,8 @@
 
 cmake_minimum_required(VERSION 3.25)
 
+project(nebld-cc VERSION 0.1 LANGUAGES CXX)
+
 option(_NEBLD_COMMONCORE_BUILD "=> Produces a CommonCore build of NeBld" OFF)
 
 message(STATUS "=> CommonCore? ${_NEBLD_COMMONCORE_BUILD}")
