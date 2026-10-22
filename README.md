@@ -1,17 +1,51 @@
-# NeBld
+# Ne.app NeBld System
 
-[![License: GPL-3.0](https://img.shields.io/badge/LICENSE-BSD--3.0-blue.svg)](LICENSE)
+[![License: BSD-3.0](https://img.shields.io/badge/LICENSE-BSD--3.0-blue.svg)](LICENSE)
 
-Fast and easy to use build system for low-level projects.
+This build system is designed to be fast and easy-to-use and easy to install. Targeting general use for C/C++ projects as well.
 
 ## Requirements:
 
 - GNU C++
 - GNU Make
 
+## Fast Install:
+
+You can install directly nebuild from this command alone on POSIX:
+
+```
+curl -fsSL https://raw.githubusercontent.com/ne-app-open/nebld/refs/heads/develop/install.sh | sh
+```
+
+### And on Windows:
+
+```
+curl -fsSL https://raw.githubusercontent.com/ne-app-open/nebld/refs/heads/develop/install.sh && install.sh
+```
+
 ## Guide (GNU Make):
 
-- Run make `build-nebld-core` and `build-nebld` to build from the sources.
+## On Linux...
+
+You do this:
+
+```sh
+make -f linux-gcc.make
+```
+
+## On Windows...
+
+You do this:
+
+```sh
+make -f win64-msvc.make
+```
+
+Or for MSVC:
+
+```sh
+make -f win64-msvc.make
+```
 
 ## Guide (NeBuild):
 

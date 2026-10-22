@@ -49,15 +49,18 @@ bool TOMLManifestBuilder::BuildTarget(BuildConfig& config) {
       if (description)
         BldKit::Logger::info() << "description: " << description->get() << std::endl;
     } catch (...) {
+      /// ...
     }
 
     auto* compiler_path_ptr = toml_file["compiler_path"].as_string();
+
     if (!compiler_path_ptr) return false;
 
     std::string compiler = compiler_path_ptr->get();
     std::string command  = compiler + " ";
 
     auto* header_search_path_ptr = toml_file["compiler_headers_path"].as_array();
+    
     if (!header_search_path_ptr) return false;
 
     auto header_search_path = header_search_path_ptr;

@@ -3,7 +3,6 @@
 # // Copyright (C) 2025-2026, Amlal El Mahrouss and Ne.app, licensed under BSD-3 license.
 # // ============================================================= //
 
-# AMLALE: Update the CMake version, which requires a version that was too old.
 cmake_minimum_required(VERSION 3.30)
 
 project(nebld VERSION 0.1 LANGUAGES CXX)
@@ -14,16 +13,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/vendor)
 
-file(GLOB NEBUILD_CLI_SOURCES "${CMAKE_SOURCE_DIR}/src/CommandLine/*.cpp")
+file(GLOB NEBUILD_CLI_SOURCES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 set(NEBUILD_SOURCES ${NEBUILD_CLI_SOURCES})
 
 add_executable(nebld ${NEBUILD_SOURCES})
 
-target_link_libraries(nebld BldKit)
+target_compile_definitions(nebld PUBLIC NEBUILD_INTERNAL_SDK)
 
 target_include_directories(nebld PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/vendor)
 
-option(BUILD_WINDOWS "=> Produce a Windows executable name (nebld.exe)" OFF)
+option(BUILD_WINDOWS "=> Produces a Windows executable name (nebld.exe)" OFF)
 
 message(STATUS "=> Sources: ${NEBUILD_SOURCES}")
 message(STATUS "=> Include Dirs: ${CMAKE_SOURCE_DIR}/src;${CMAKE_SOURCE_DIR}/vendor")
